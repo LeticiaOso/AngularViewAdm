@@ -1,0 +1,83 @@
+﻿@model IEnumerable<AngularViewAdm.Models.Vendedores>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de vendedores</h1>
+
+<p>
+    <a asp-action="Create">Agregar nuevo vendedor</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Freelancer
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Token)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                Contraseña
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Activo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modificado)
+            </th>
+            <th>
+                Fecha de caducidad
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comision)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdFreelance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Token)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Passworsd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modificado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCaducidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comision)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn btn-primary"  asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

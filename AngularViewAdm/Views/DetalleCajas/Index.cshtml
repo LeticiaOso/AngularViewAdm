@@ -1,0 +1,107 @@
+﻿@model IEnumerable<AngularViewAdm.Models.DetalleCaja>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Detalles de las cajas</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resumen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RedWhats)
+            </th>
+            <th>
+               Facebook
+            </th>
+            <th>
+                Instagram
+            </th>
+            <th>
+               Video de YouTube
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modificado)
+            </th>
+            <th>
+                Razon social
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rfc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+               Pagina web
+            </th>
+            <th>
+                Caja
+            </th>
+            <th>
+               Expositor
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resumen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RedWhats)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RedFacebook)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RedInstagram)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VideoYoutube)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modificado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RazonSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rfc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaginaWeb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCajaNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdExpositorNavigation.Id)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn btn-primary"  asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

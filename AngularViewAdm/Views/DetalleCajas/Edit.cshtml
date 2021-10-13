@@ -1,0 +1,94 @@
+﻿@model AngularViewAdm.Models.DetalleCaja
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Detalle de las cajas</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="IdExpositor" class="control-label"></label>
+                <select asp-for="IdExpositor" class="form-control" asp-items="ViewBag.IdExpositor"></select>
+                <span asp-validation-for="IdExpositor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resumen" class="control-label"></label>
+                <input asp-for="Resumen" class="form-control" />
+                <span asp-validation-for="Resumen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RedWhats" class="control-label"></label>
+                <input asp-for="RedWhats" class="form-control" />
+                <span asp-validation-for="RedWhats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RedFacebook" class="control-label"></label>
+                <input asp-for="RedFacebook" class="form-control" />
+                <span asp-validation-for="RedFacebook" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RedInstagram" class="control-label"></label>
+                <input asp-for="RedInstagram" class="form-control" />
+                <span asp-validation-for="RedInstagram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VideoYoutube" class="control-label"></label>
+                <input asp-for="VideoYoutube" class="form-control" />
+                <span asp-validation-for="VideoYoutube" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCaja" class="control-label"></label>
+                <select asp-for="IdCaja" class="form-control" asp-items="ViewBag.IdCaja"></select>
+                <span asp-validation-for="IdCaja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modificado" class="control-label"></label>
+                <input asp-for="Modificado" class="form-control" />
+                <span asp-validation-for="Modificado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazonSocial" class="control-label"></label>
+                <input asp-for="RazonSocial" class="form-control" />
+                <span asp-validation-for="RazonSocial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rfc" class="control-label"></label>
+                <input asp-for="Rfc" class="form-control" />
+                <span asp-validation-for="Rfc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaginaWeb" class="control-label"></label>
+                <input asp-for="PaginaWeb" class="form-control" />
+                <span asp-validation-for="PaginaWeb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardad" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Regresar a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

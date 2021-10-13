@@ -1,0 +1,71 @@
+﻿@model IEnumerable<AngularViewAdm.Models.Sala>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de salas</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroSala)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoSala)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Activo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modificado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Espacios)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEventoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroSala)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoSala)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modificado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Espacios)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEventoNavigation.Id)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn btn-primary"  asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliinar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

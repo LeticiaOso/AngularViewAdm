@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AngularViewAdm.Models.MetodoDePago>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de metodos de pago</h1>
+
+<p>
+    <a asp-action="Create">Agregar nuevo metodo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TpoDePago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Activo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modifacdo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TpoDePago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modifacdo)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn btn-primary"  asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
