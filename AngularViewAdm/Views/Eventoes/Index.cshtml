@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+
 }
 
 <h1>Lista de eventos</h1>
@@ -19,17 +20,48 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a class="btn btn-primary"  asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            int ocupados = 0, disponibles = 0;
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @foreach (var cajitas in item.Caja)
+                    {
+                        if (cajitas.Ocupado == 1)
+                        {
+                            ocupados = ocupados + 1;
+                        }
+                        else
+                        {
+                            disponibles++;
+                        }
+                    }
+                    @item.Caja.Count()
+                </td>
+                <td>
+                    Disponibles:
+                    @disponibles
+                    Ocupados:
+                    @ocupados
+                </td>
+                <td>
+                    @foreach (var Salas in item.Sala)
+                    {
+                        <a class="btn btn-info" asp-action="" asp-route-id="@Salas.Id">@Salas.Nombre</a>
+                    }
+                    @item.Caja.Count()
+                </td>
+                <td>
+                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+
+            </tr>
+        }
     </tbody>
 </table>
+

@@ -8,72 +8,128 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AngularViewAdm</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
 
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Cajas
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="Cajas">Caja</a>
-                                <a class="dropdown-item" href="DetalleCajas">Detalle caja</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Expositores
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="Expositors">Expositor</a>
-                                <a class="dropdown-item" href="ExpositorPagoes">Expositor pago</a>
-                                <a class="dropdown-item" href="Vendedores">Vendedores</a>
-                                <a class="dropdown-item" href="Usuarios">Usuarios</a>
-                                <a class="dropdown-item" href=" Clientes">Cliente</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Eventos
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="Eventoes">Evento</a>
-                                <a class="dropdown-item" href="Items">Items</a>
-                                <a class="dropdown-item" href="MetodoDePagoes">Metodos de pago</a>
-                                <a class="dropdown-item" href="PagosComisions">Pagos de comisiones</a>
-                                <a class="dropdown-item" href="ProductoServicios">Productos/servicios</a>
-                                <a class="dropdown-item" href="Salas">Salas</a>
-                                <a class="dropdown-item" href="TipoEnvios">Tipos de envios</a>
-                                <a class="dropdown-item" href="TipoPagoes">Tipos de pagos</a>
-                                <a class="dropdown-item" href="VentaEsoacios">Venta de espacios</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav flex-grow ">
-                        <li class="nav-item">
-                            <a class="nav-link" href="Administrador">Administrador</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AngularViewAdm</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
 
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cajas
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Cajas">Caja</a>
+                            <a class="dropdown-item" href="DetalleCajas">Detalle caja</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Expositores
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Expositors">Expositor</a>
+                            <a class="dropdown-item" href="ExpositorPagoes">Expositor pago</a>
+                            <a class="dropdown-item" href="Vendedores">Vendedores</a>
+                            <a class="dropdown-item" href="Usuarios">Usuarios</a>
+                            <a class="dropdown-item" href=" Clientes">Cliente</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Eventos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Eventoes">Evento</a>
+                            <a class="dropdown-item" href="Items">Items</a>
+                            <a class="dropdown-item" href="MetodoDePagoes">Metodos de pago</a>
+                            <a class="dropdown-item" href="PagosComisions">Pagos de comisiones</a>
+                            <a class="dropdown-item" href="ProductoServicios">Productos/servicios</a>
+                            <a class="dropdown-item" href="Salas">Salas</a>
+                            <a class="dropdown-item" href="TipoEnvios">Tipos de envios</a>
+                            <a class="dropdown-item" href="TipoPagoes">Tipos de pagos</a>
+                            <a class="dropdown-item" href="VentaEsoacios">Venta de espacios</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav flex-grow ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Administrador">Administrador</a>
+                    </li>
+                </ul>
             </div>
-           
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
+        </div>
+
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <img src="/img/Alda.png" alt="..." style="width: 80px; padding-top: 1em; margin-left: 2em;">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+
+                        <li class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Eventos</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="Eventoes">Calendario</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                            <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Expositores</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu1">
+
+                                <li>
+                                    <a href="Expositors">Clientes</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                            <a href="#pageSubmenu123" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ventas</a>
+
+                        </li>
+                        <li class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                            <a href="VentaEspacios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Estadisticas</a>
+
+                        </li>
+                        <li class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                            <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administrador</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu13">
+                                <li>
+                                    <a href="Usuarios">Configuracion</a>
+                                </li>
+                                <li>
+                                    <a href="Vendedores">Freelance</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - AngularViewAdm - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>

@@ -12,18 +12,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Correo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Token)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registro)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Nombre)
             </th>
@@ -31,16 +20,13 @@
                 @Html.DisplayNameFor(model => model.Apellidos)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Activo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Modificado)
+                @Html.DisplayNameFor(model => model.Negocio)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Celular)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Negocio)
+                CAJA
             </th>
             <th></th>
         </tr>
@@ -48,39 +34,25 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Correo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Token)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Registro)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Apellidos)
             </td>
+            <th>
+                @Html.DisplayNameFor(modelItem => item.Negocio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelItem => item.Celular)
+            </th>
             <td>
-                @Html.DisplayFor(modelItem => item.Activo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Modificado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Celular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Negocio)
+                @Html.DisplayFor(modelItem => item.DetalleCaja)
             </td>
             <td>
                 <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a class="btn btn-primary"  asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
                 <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
             </td>
         </tr>

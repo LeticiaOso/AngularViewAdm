@@ -21,7 +21,7 @@ namespace AngularViewAdm.Controllers
         // GET: Eventoes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Evento.ToListAsync());
+            return View(await _context.Evento.Include(f=>f.Sala).Include(f=>f.Caja).ToListAsync());
         }
 
         // GET: Eventoes/Details/5
